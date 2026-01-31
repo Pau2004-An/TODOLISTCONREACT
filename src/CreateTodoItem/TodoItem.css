@@ -1,0 +1,57 @@
+.TodoItem {
+  background-color: white;
+  padding: 14px 16px;
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover de toda la card */
+.TodoItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* CHECK */
+.TodoItem-check {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #ba0867;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Estado completado */
+.TodoItem--completed .TodoItem-check {
+  background-color: #ba0867;
+}
+
+.TodoItem--completed .TodoItem-text {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* TEXTO */
+.TodoItem-text {
+  flex: 1;
+  margin: 0;
+  color: #ba0867;
+  font-size: 0.95rem;
+}
+
+/* DELETE */
+.TodoItem-delete {
+  color: #e4a9d2;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.TodoItem-delete:hover {
+  color: #ba0867;
+}

@@ -1,0 +1,114 @@
+/* Fondo oscuro con blur */
+.ModalBackground {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(0, 112, 52, 0.25);
+  backdrop-filter: blur(6px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 1000;
+}
+
+/* Caja del modal */
+.ModalContent {
+  background: #ffe167b0;;
+  padding: 28px 32px;
+  border-radius: 20px;
+
+  width: 90%;
+  max-width: 360px;
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  animation: modalFadeIn 0.35s ease;
+}
+
+/* Título */
+.ModalContent h3 {
+  margin: 0;
+  text-align: center;
+  color: #ba0867;
+  font-size: 1.4rem;
+}
+
+/* Input */
+.ModalContent input {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 2px solid #59C579;
+
+  font-size: 0.95rem;
+  outline: none;
+
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.ModalContent input:focus {
+  border-color: #acff85;
+  box-shadow: 0 0 0 3px rgba(132, 197, 175, 0.2);
+}
+
+/* Contenedor botones */
+.ModalButtons {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* Botones base */
+.ModalButtons button {
+  flex: 1;
+  padding: 10px 0;
+  border-radius: 12px;
+  border: none;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+/* Botón crear */
+.ModalButtons button:first-child {
+  background: linear-gradient(135deg, #1fa145, #1fa145);
+  color: white;
+}
+
+.ModalButtons button:first-child:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(133, 196, 239, 0.35);
+}
+
+/* Botón cancelar */
+.ModalButtons button:last-child {
+  background: #1fa145;
+  color: #ffffff;
+}
+
+.ModalButtons button:last-child:hover {
+  background: #aa0478;
+}
+
+/* Animación entrada */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

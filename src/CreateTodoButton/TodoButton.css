@@ -1,0 +1,48 @@
+.CreateTodoButton {
+  bottom: 24px;
+  right: 24px;
+  border: none;
+  background-color: #ffef41;
+  color: rgb(117, 2, 94);
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(236, 24, 193, 0.626);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: static;
+  width: 140px;
+  height: 44px;
+  border-radius: 12px;
+  font-size: 1rem;
+  animation: none;
+    margin: 0 auto;
+}
+
+
+
+/* Hover */
+.CreateTodoButton:hover {
+  box-shadow: 0 12px 28px rgba(239, 72, 206, 0.6);
+}
+
+/* Click */
+.CreateTodoButton:active {
+  transform: scale(0.95);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(254, 162, 239, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(127, 0, 178, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(127, 0, 178, 0);
+  }
+}
+
+.CreateTodoButton {
+  animation: pulse 2s infinite;
+}
+

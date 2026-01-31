@@ -1,0 +1,41 @@
+
+.TodoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Título */
+.TodoSection h2 {
+  font-size: 1.4rem;
+  color: #ba0867;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+/* Tareas */
+.tareas {
+  font-size: 1.4rem;
+  color: #ba0867;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+/* Ajustes finos al contador */
+.TodoSection .TodoCounter {
+  font-size: 1rem;
+  color: #181804;
+  margin: 0;
+}
+
+/* Search dentro de la sección */
+.TodoSection .TodoSearch {
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.TodoSection {
+  border-left: 1px solid #ba0867;
+  padding-left: 24px;
+}
+
